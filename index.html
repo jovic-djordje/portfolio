@@ -22,90 +22,130 @@
   <body>
     <main>
       <section class="bento-grid">
-        <!-- GRID LEFT SIDE -->
-        <div class="col-left">
-          <!-- FIRS ROW ON LEFT SIDE  -->
-          <div class="box">
-            <div class="inner-left-col-box box-1">
-              <div class="box-1-text-holder">
-                <h1 class="box-1-title">Hi, I'm Djordje —</h1>
-                <p class="box-1-text">
-                  I build websites for personal coaches who want to grow their
-                  online business
-                </p>
-              </div>
-            </div>
-
-            <div class="inner-left-col-box box-2">
-              <div class="box-2-image"></div>
-
-              <div class="box-2-overlay">
-                <h3 class="prjocet-title">PersonalCoachRatak</h3>
-                <ion-icon
-                  name="arrow-forward-outline"
-                  class="box-4-icon box-2-icon"
-                ></ion-icon>
-              </div>
-            </div>
-          </div>
-          <!-- FIRS ROW ON LEFT SIDE  -->
-
-          <!-- SECOND ROW ON LEFT SIDE  -->
-          <div class="box">
-            <div class="inner-left-col-box box-3"></div>
-
-            <div class="inner-left-col-box box-4">
-              <div class="box-4-text-holder">
-                <p class="box-4-label">About</p>
-                <h3 class="box-4-text">
-                  Passionate about helping coaches build websites that convert
-                  visitors into clients.
-                </h3>
-                <div class="box-4-icon-holder">
-                  <ion-icon
-                    name="arrow-forward-outline"
-                    class="box-4-icon"
-                  ></ion-icon>
-                </div>
-              </div>
-            </div>
-          </div>
-          <!-- SECOND ROW ON LEFT SIDE  -->
-
-          <!-- THIRD ROW ON LEFT SIDE  -->
-          <div class="box">
-            <div class="inner-left-col-box box-5">
-              <div class="box-5-text-holder">
-                <h3 class="box-5-text box-4-text">
-                  Need a website for your business?
-                </h3>
-                <button class="box-5-btn" onclick="copyEmail()">
-                  <span class="email-text">Copy email</span>
-                  <ion-icon name="copy-outline" class="copy-icon"></ion-icon>
-                </button>
-              </div>
-              <span class="copied-message"
-                >Copied
-                <ion-icon
-                  name="checkmark-done-outline"
-                  class="copied-message-icon"
-                ></ion-icon
-              ></span>
-            </div>
-
-            <div class="inner-left-col-box"></div>
-
-            <div class="inner-left-col-box"></div>
+        <!-- All boxes as direct children for easier reordering -->
+        <div class="inner-left-col-box box-1">
+          <div class="box-1-text-holder">
+            <h1 class="box-1-title">Hi, I'm Djordje —</h1>
+            <p class="box-1-text">
+              I build modern websites that help small businesses grow online
+            </p>
           </div>
         </div>
-        <!-- THIRD ROW ON LEFT SIDE  -->
 
-        <!-- GRID RIGHT SIDE -->
-        <div class="col-right">
-          <div class="box"></div>
-          <div class="box"></div>
+        <div class="inner-left-col-box box-2">
+          <div class="box-2-image"></div>
+          <div class="box-2-overlay">
+            <h3 class="prjocet-title">PersonalCoachRatak</h3>
+            <ion-icon
+              name="arrow-forward-outline"
+              class="box-4-icon box-2-icon"
+            ></ion-icon>
+          </div>
         </div>
-        <!-- GRID RIGHT SIDE -->
+
+        <div class="inner-left-col-box box-3"></div>
+
+        <div class="inner-left-col-box box-4">
+          <div class="box-4-text-holder">
+            <p class="box-4-label">About</p>
+            <h3 class="box-4-text">
+              Passionate about turning business ideas into websites that
+              actually work and convert.
+            </h3>
+            <div class="box-4-icon-holder">
+              <ion-icon
+                name="arrow-forward-outline"
+                class="box-4-icon"
+              ></ion-icon>
+            </div>
+          </div>
+        </div>
+
+        <div class="inner-left-col-box box-5">
+          <div class="box-5-text-holder">
+            <h3 class="box-5-text box-4-text">
+              Need a website for your business?
+            </h3>
+            <button class="box-5-btn" onclick="copyEmail()">
+              <span class="email-text">Copy email</span>
+              <ion-icon name="copy-outline" class="copy-icon"></ion-icon>
+            </button>
+          </div>
+          <span class="copied-message">
+            Copied
+            <ion-icon
+              name="checkmark-outline"
+              class="copied-message-icon"
+            ></ion-icon>
+          </span>
+        </div>
+
+        <div class="inner-left-col-box box-6">
+          <div class="box-6-image"></div>
+          <div class="box-2-overlay">
+            <h3 class="prjocet-title">AlpineHouse</h3>
+            <ion-icon
+              name="arrow-forward-outline"
+              class="box-4-icon box-2-icon"
+            ></ion-icon>
+          </div>
+        </div>
+
+        <div class="inner-left-col-box box-7">
+          <div class="box-7-btn">
+            <input type="checkbox" id="check" />
+            <label for="check" class="btn"></label>
+          </div>
+        </div>
+
+        <div class="inner-right-col-box box-8">
+          <div class="box-8-soacila-medias">
+            <div class="socials-holder instagram">
+              <ion-icon name="logo-instagram" class="box-8-icon"></ion-icon>
+            </div>
+            <div class="socials-holder linkedin">
+              <ion-icon name="logo-linkedin" class="box-8-icon"></ion-icon>
+            </div>
+            <div class="socials-holder tiktok">
+              <ion-icon name="logo-tiktok" class="box-8-icon"></ion-icon>
+            </div>
+            <div class="socials-holder mail">
+              <ion-icon name="mail-outline" class="box-8-icon"></ion-icon>
+            </div>
+          </div>
+        </div>
+
+        <div class="inner-right-col-box box-9">
+          <div class="box-9-holder">
+            <h3 class="box-9-title box-4-text">Stack I use</h3>
+            <div class="stack-icons">
+              <div class="stack-icon icon-1">
+                <img src="images/chatgpt.webp" alt="chatgpt" />
+              </div>
+              <div class="stack-icon icon-2">
+                <img src="images/midjourney.webp" alt="midjourney" />
+              </div>
+              <div class="stack-icon icon-3">
+                <img src="images/relume.webp" alt="relume" />
+              </div>
+              <div class="stack-icon icon-4">
+                <img src="images/html.webp" alt="html" />
+              </div>
+              <div class="stack-icon icon-5">
+                <img src="images/css.webp" alt="css" />
+              </div>
+              <div class="stack-icon icon-6">
+                <img src="images/javascript.webp" alt="javascript" />
+              </div>
+              <div class="stack-icon icon-7">
+                <img src="images/react.webp" alt="react" />
+              </div>
+              <div class="stack-icon icon-8">
+                <img src="images/supabase.webp" alt="supabase" />
+              </div>
+            </div>
+          </div>
+        </div>
       </section>
     </main>
 
