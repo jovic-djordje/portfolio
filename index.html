@@ -15,15 +15,22 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Alata&family=Bebas+Neue&family=Bree+Serif&family=Bricolage+Grotesque:opsz,wght@12..96,200..800&family=Calistoga&family=Corben:wght@400;700&family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Fredoka:wght@300..700&family=Inter+Tight:ital,wght@0,100..900;1,100..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Jost:ital,wght@0,100..900;1,100..900&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Macondo&family=Manrope:wght@200..800&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Mozilla+Text:wght@200..700&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Outfit:wght@100..900&family=Patua+One&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Quicksand:wght@300..700&family=Roboto:ital,wght@0,100..900;1,100..900&family=Rubik:ital,wght@0,300..900;1,300..900&family=Sansation:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Sora:wght@100..800&family=Space+Grotesk:wght@300..700&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap"
       rel="stylesheet"
     />
+
+    <!-- AOS CSS -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
   </head>
   <body>
     <main>
       <section class="bento-grid">
-        <!-- All boxes as direct children for easier reordering -->
-        <div class="inner-left-col-box box-1">
+        <!-- BOX 1 - Hero -->
+        <div
+          class="inner-left-col-box box-1"
+          data-aos="zoom-in"
+          data-aos-delay="100"
+        >
           <div class="box-1-text-holder">
             <h1 class="box-1-title">Hi, I'm Djordje —</h1>
             <p class="box-1-text">
@@ -32,7 +39,12 @@
           </div>
         </div>
 
-        <div class="inner-left-col-box box-2">
+        <!-- BOX 2 - Project 1 -->
+        <div
+          class="inner-left-col-box box-2"
+          data-aos="zoom-in"
+          data-aos-delay="200"
+        >
           <a href="project-coach.html" class="box-2-link">
             <div class="box-2-image"></div>
             <div class="box-2-overlay">
@@ -45,9 +57,20 @@
           </a>
         </div>
 
-        <div class="inner-left-col-box box-3"></div>
+        <!-- BOX 3 - Photo -->
+        <div
+          class="inner-left-col-box box-3"
+          data-aos="zoom-in"
+          data-aos-delay="250"
+        ></div>
 
-        <a href="about.html" class="box-4-link">
+        <!-- BOX 4 - About Link -->
+        <a
+          href="about.html"
+          class="box-4-link"
+          data-aos="zoom-in"
+          data-aos-delay="300"
+        >
           <div class="inner-left-col-box box-4">
             <div class="box-4-text-holder">
               <p class="box-4-label">About</p>
@@ -65,7 +88,12 @@
           </div>
         </a>
 
-        <div class="inner-left-col-box box-5">
+        <!-- BOX 5 - Contact -->
+        <div
+          class="inner-left-col-box box-5"
+          data-aos="zoom-in"
+          data-aos-delay="350"
+        >
           <div class="box-5-text-holder">
             <h3 class="box-5-text box-4-text">
               Need a website for your business?
@@ -84,7 +112,12 @@
           </span>
         </div>
 
-        <div class="inner-left-col-box box-6">
+        <!-- BOX 6 - Project 2 -->
+        <div
+          class="inner-left-col-box box-6"
+          data-aos="zoom-in"
+          data-aos-delay="400"
+        >
           <a href="project-restaurant.html" class="box-6-link">
             <div class="box-6-image"></div>
             <div class="box-2-overlay">
@@ -97,14 +130,24 @@
           </a>
         </div>
 
-        <div class="inner-left-col-box box-7">
+        <!-- BOX 7 - Theme Toggle -->
+        <div
+          class="inner-left-col-box box-7"
+          data-aos="zoom-in"
+          data-aos-delay="450"
+        >
           <div class="box-7-btn">
             <input type="checkbox" id="check" />
             <label for="check" class="btn"></label>
           </div>
         </div>
 
-        <div class="inner-right-col-box box-8">
+        <!-- BOX 8 - Social Media -->
+        <div
+          class="inner-right-col-box box-8"
+          data-aos="zoom-in"
+          data-aos-delay="350"
+        >
           <div class="box-8-soacila-medias">
             <a href="https://www.instagram.com/djordjejovic_" target="_blank">
               <div class="socials-holder instagram">
@@ -133,32 +176,69 @@
           </div>
         </div>
 
-        <div class="inner-right-col-box box-9">
+        <!-- BOX 9 - Stack Icons -->
+        <div
+          class="inner-right-col-box box-9"
+          data-aos="zoom-in"
+          data-aos-delay="400"
+        >
           <div class="box-9-holder">
             <h3 class="box-9-title box-4-text">Stack I use</h3>
             <div class="stack-icons">
-              <div class="stack-icon icon-1">
+              <div
+                class="stack-icon icon-1"
+                data-aos="flip-left"
+                data-aos-delay="500"
+              >
                 <img src="images/chatgpt.webp" alt="chatgpt" />
               </div>
-              <div class="stack-icon icon-2">
+              <div
+                class="stack-icon icon-2"
+                data-aos="flip-left"
+                data-aos-delay="550"
+              >
                 <img src="images/midjourney.webp" alt="midjourney" />
               </div>
-              <div class="stack-icon icon-3">
+              <div
+                class="stack-icon icon-3"
+                data-aos="flip-left"
+                data-aos-delay="600"
+              >
                 <img src="images/relume.webp" alt="relume" />
               </div>
-              <div class="stack-icon icon-4">
+              <div
+                class="stack-icon icon-4"
+                data-aos="flip-left"
+                data-aos-delay="650"
+              >
                 <img src="images/html.webp" alt="html" />
               </div>
-              <div class="stack-icon icon-5">
+              <div
+                class="stack-icon icon-5"
+                data-aos="flip-left"
+                data-aos-delay="700"
+              >
                 <img src="images/css.webp" alt="css" />
               </div>
-              <div class="stack-icon icon-6">
+              <div
+                class="stack-icon icon-6"
+                data-aos="flip-left"
+                data-aos-delay="750"
+              >
                 <img src="images/javascript.webp" alt="javascript" />
               </div>
-              <div class="stack-icon icon-7">
+              <div
+                class="stack-icon icon-7"
+                data-aos="flip-left"
+                data-aos-delay="800"
+              >
                 <img src="images/react.webp" alt="react" />
               </div>
-              <div class="stack-icon icon-8">
+              <div
+                class="stack-icon icon-8"
+                data-aos="flip-left"
+                data-aos-delay="850"
+              >
                 <img src="images/supabase.webp" alt="supabase" />
               </div>
             </div>
@@ -166,6 +246,18 @@
         </div>
       </section>
     </main>
+
+    <!-- AOS Script -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+      AOS.init({
+        duration: 1000, // Brže za "pop" efekat
+        easing: "ease-out-back", // Bounce-back efekat
+        once: true,
+        offset: 50,
+        delay: 50,
+      });
+    </script>
 
     <script src="js/script.js"></script>
     <script
