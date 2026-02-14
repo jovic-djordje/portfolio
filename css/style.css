@@ -40,7 +40,7 @@ main {
   grid-template-columns: repeat(12, 1fr);
   gap: 16px;
   border: 3px solid #242424;
-  border-radius: 32px;
+  border-radius: 24px;
   padding: 16px;
   margin: 10px auto;
   width: 99%;
@@ -94,7 +94,7 @@ main {
 /* Combined: All box base styling */
 .inner-left-col-box,
 .inner-right-col-box {
-  border-radius: 32px;
+  border-radius: 24px;
   overflow: hidden;
   border: 3px solid #242424;
   background: #141414;
@@ -132,7 +132,7 @@ main {
 
 .box-5-btn::before,
 .stack-icon::before {
-  border-radius: 10px;
+  border-radius: 16px;
 }
 
 .socials-holder::before {
@@ -177,10 +177,22 @@ main {
 }
 
 /* BOX 2 & 6 - Projects (combined shared styles) */
+.box-2-link {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  text-decoration: none;
+  color: inherit;
+  display: block;
+  z-index: 3;
+  cursor: url("../images/cursor.png"), auto;
+}
+
 .box-2,
 .box-6 {
   position: relative;
-  cursor: pointer;
   cursor: url("../images/cursor.png"), auto;
 }
 
@@ -202,14 +214,9 @@ main {
   background-image: url(../images/project.webp);
 }
 
-.box-6-image {
-  background-image: url(../images/project-three.webp);
-}
-
 .box-2:hover .box-2-image,
 .box-6:hover .box-6-image {
   transform: scale(1.1);
-  cursor: url("../images/cursor.png"), auto;
 }
 
 .box-2-overlay {
@@ -224,12 +231,12 @@ main {
   transform: translateY(100%);
   transition: transform 0.4s ease;
   z-index: 2;
+  pointer-events: none;
 }
 
 .box-2:hover .box-2-overlay,
 .box-6:hover .box-2-overlay {
   transform: translateY(0);
-  cursor: url("../images/cursor.png"), auto;
 }
 
 .prjocet-title {
@@ -351,7 +358,7 @@ main {
   gap: 12px;
   padding: 12px 0;
   width: 100%;
-  border-radius: 10px;
+  border-radius: 16px;
   border: none;
   background-color: #242424;
   color: #cccccc;
@@ -812,4 +819,264 @@ input:checked + .btn::before {
 
 .box-4-about-text-holder {
   gap: 24px;
+}
+
+/*PROJECT PAGE */
+
+.project-header {
+  display: grid;
+  align-items: flex-start;
+  gap: 24px;
+  grid-column: 2 / 12;
+}
+
+.project-title-holder {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 4px;
+}
+
+.project-heading {
+  font-weight: 500;
+}
+
+.project-subheading {
+  color: #666666;
+  text-transform: uppercase;
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.project-cart-holder {
+  display: grid;
+  align-items: center;
+  gap: 16px;
+  grid-template-columns: repeat(12, 1fr);
+}
+
+.box-1-project {
+  padding: 30px;
+  grid-column: 1 / 5;
+}
+
+.box-1-project-text-holder {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 24px;
+}
+
+.box-1-project-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 4px;
+}
+
+.box-1-project-info h3 {
+  color: #666666;
+  text-transform: uppercase;
+  font-size: 16px;
+  font-weight: 600;
+  letter-spacing: 1px;
+}
+
+.box-1-project-info p {
+  line-height: 1.7;
+  font-size: 20px;
+}
+
+.box-2-project {
+  padding: 30px;
+  grid-row: 1;
+  grid-column: 5 / 13;
+  height: 100%;
+}
+
+.box-2-project-text-holder {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 28px;
+}
+
+.box-2-project-overview {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 16px;
+}
+
+.box-2-project-overview h3 {
+  color: #666666;
+  text-transform: uppercase;
+  font-size: 16px;
+  font-weight: 600;
+  letter-spacing: 1px;
+}
+
+.box-2-project-overview p {
+  font-size: 20px;
+  line-height: 1.7;
+}
+
+.project-box-btn-link {
+  max-width: 200px;
+  width: 100%;
+  text-decoration: none;
+  cursor: url("../images/cursor.png"), auto;
+}
+
+.project-box-btn {
+  font-size: 18px;
+  font-family: inherit;
+  color: #cccccc;
+  background: transparent;
+  border: 3px solid #242424;
+  max-width: 200px;
+  width: 100%;
+  padding: 10px 0px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+  cursor: url("../images/cursor.png"), auto;
+  border-radius: 16px;
+}
+
+.project-box-btn:hover {
+  background: #242424;
+  cursor: url("../images/cursor.png"), auto;
+}
+
+.box-3-project {
+  grid-row: 4;
+  grid-column: 2 / 12;
+  background-image: url(../images/RatakFit.webp);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  aspect-ratio: 16 / 9;
+  margin: 20px 0px;
+  border-radius: 12px;
+}
+
+.project-section {
+  grid-row: 3;
+  grid-column: 2 / 12;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 16px;
+}
+
+.project-section h2 {
+  font-size: 28px;
+  margin-top: 20px;
+}
+
+.project-section p {
+  font-size: 20px;
+  line-height: 1.5;
+}
+
+.challenge-list {
+  margin-left: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 12px;
+  font-size: 20px;
+}
+
+.process-section {
+  grid-row: 5;
+  grid-column: 2 / 12;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 16px;
+}
+
+.process-section h2 {
+  font-size: 28px;
+}
+
+.process-step {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 12px;
+}
+
+.process-step h4 {
+  font-size: 22px;
+  font-weight: 500;
+}
+
+.process-step p {
+  font-size: 20px;
+  line-height: 1.5;
+}
+
+.solution-section {
+  grid-row: 6;
+  grid-column: 2 / 12;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 16px;
+}
+
+.solution-section h2 {
+  font-size: 28px;
+  margin-top: 20px;
+}
+
+.solution-grid {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 16px;
+}
+
+.solution-item {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 4px;
+}
+
+.solution-item h4 {
+  font-size: 22px;
+}
+
+.solution-item p {
+  font-size: 20px;
+  line-height: 1.5;
+}
+
+.solution-image {
+  grid-row: 7;
+  grid-column: 2 / 12;
+  background-image: url(../images/RatakFit2.webp);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  aspect-ratio: 16 / 9;
+  margin: 20px 0px;
+  border-radius: 12px;
 }

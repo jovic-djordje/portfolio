@@ -30,31 +30,32 @@ const track = document.querySelector(".carousel-track");
 const dots = document.querySelectorAll(".dot");
 
 // Click on dots to scroll to slide
-dots.forEach((dot) => {
-  dot.addEventListener("click", () => {
-    const slideIndex = parseInt(dot.getAttribute("data-slide"));
-    const slideWidth = track.querySelector(".carousel-slide").offsetWidth;
-    track.scrollTo({
-      left: slideWidth * slideIndex,
-      behavior: "smooth",
+if (track && dots.length > 0) {
+  dots.forEach((dot) => {
+    dot.addEventListener("click", () => {
+      const slideIndex = parseInt(dot.getAttribute("data-slide"));
+      const slideWidth = track.querySelector(".carousel-slide").offsetWidth;
+      track.scrollTo({
+        left: slideWidth * slideIndex,
+        behavior: "smooth",
+      });
     });
   });
-});
 
-// Update active dot on scroll
-track.addEventListener("scroll", () => {
-  const slideWidth = track.querySelector(".carousel-slide").offsetWidth;
-  const currentIndex = Math.round(track.scrollLeft / slideWidth);
+  // Update active dot on scroll
+  track.addEventListener("scroll", () => {
+    const slideWidth = track.querySelector(".carousel-slide").offsetWidth;
+    const currentIndex = Math.round(track.scrollLeft / slideWidth);
 
-  dots.forEach((dot, index) => {
-    if (index === currentIndex) {
-      dot.classList.add("active");
-    } else {
-      dot.classList.remove("active");
-    }
+    dots.forEach((dot, index) => {
+      if (index === currentIndex) {
+        dot.classList.add("active");
+      } else {
+        dot.classList.remove("active");
+      }
+    });
   });
-});
-
+}
 const closeBtn = document.querySelector(".about-icon-holder");
 
 closeBtn.addEventListener("click", (e) => {
