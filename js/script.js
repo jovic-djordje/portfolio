@@ -58,7 +58,36 @@ if (track && dots.length > 0) {
 }
 const closeBtn = document.querySelector(".about-icon-holder");
 
-closeBtn.addEventListener("click", (e) => {
-  e.preventDefault();
-  window.history.back();
+if (closeBtn) {
+  closeBtn.addEventListener("click", (e) => {
+    e.preventDefault();
+    window.history.back();
+  });
+}
+
+// Theme Switcher
+const themeToggle = document.getElementById("check");
+
+// Load saved theme on page load
+document.addEventListener("DOMContentLoaded", () => {
+  // Check localStorage
+  if (localStorage.getItem("theme") === "light") {
+    document.body.classList.add("light-theme");
+    if (themeToggle) {
+      themeToggle.checked = true;
+    }
+  }
+
+  // Toggle theme on change
+  if (themeToggle) {
+    themeToggle.addEventListener("change", () => {
+      if (themeToggle.checked) {
+        document.body.classList.add("light-theme");
+        localStorage.setItem("theme", "light");
+      } else {
+        document.body.classList.remove("light-theme");
+        localStorage.setItem("theme", "dark");
+      }
+    });
+  }
 });
