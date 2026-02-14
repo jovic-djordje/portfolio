@@ -3,41 +3,62 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Self-taught frontend developer from Bosnia specializing in conversion-focused websites for small businesses. Learn about my journey and approach to web development."
+    />
     <title>About | Djordje Jovic</title>
-    <link rel="stylesheet" href="css/style.css" />
-    <link rel="stylesheet" href="css/queries.css" />
-    <link rel="shortcut icon" href="images/logo2.png" type="image/x-icon" />
+
+    <!-- Preconnect -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preconnect" href="https://unpkg.com" />
+
+    <!-- Favicon -->
+    <link rel="icon" href="images/logo2.webp" type="image/webp" />
+
+    <!-- Preload Critical Resources -->
+    <link rel="preload" href="css/style.css" as="style" />
     <link
-      href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap"
+      rel="preload"
+      href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;600;700&display=swap"
+      as="style"
+    />
+
+    <!-- Critical CSS -->
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/queries.css" />
+
+    <!-- Fonts (optimized) -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;600;700&display=swap"
       rel="stylesheet"
     />
 
-    <!-- AOS CSS -->
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <!-- AOS CSS (non-blocking) -->
+    <link
+      href="https://unpkg.com/aos@2.3.1/dist/aos.css"
+      rel="stylesheet"
+      media="print"
+      onload="this.media = 'all'"
+    />
+    <noscript>
+      <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    </noscript>
   </head>
 
   <body>
     <main>
       <section class="bento-grid about-grid">
         <!-- Close Button -->
-        <div
-          class="about-page-btn-holder"
-          data-aos="zoom-in"
-          data-aos-delay="100"
-        >
+        <div class="about-page-btn-holder" data-aos="zoom-in">
           <div class="about-icon-holder">
             <ion-icon name="close-outline" class="about-page-icon"></ion-icon>
           </div>
         </div>
 
-        <!-- BOX 1 - Story -->
-        <div
-          class="inner-left-col-box box-1-about"
-          data-aos="zoom-in"
-          data-aos-delay="200"
-        >
+        <!-- BOX 1 - Story (LCP element - no delay!) -->
+        <div class="inner-left-col-box box-1-about" data-aos="zoom-in">
           <div class="box-1-text-holder box-1-about-text-holder">
             <h1 class="box-1-about-title">What I'm about?</h1>
             <span></span>
@@ -66,7 +87,7 @@
         <div
           class="inner-left-col-box box-2-about"
           data-aos="zoom-in"
-          data-aos-delay="250"
+          data-aos-delay="100"
         >
           <h3 class="section-label">WHAT I DO BEST</h3>
 
@@ -113,7 +134,7 @@
         <div
           class="inner-left-col-box box-3-about"
           data-aos="zoom-in"
-          data-aos-delay="300"
+          data-aos-delay="150"
         >
           <div class="box-3-holder">
             <h3 class="box-9-title box-4-text">Stack I use</h3>
@@ -121,58 +142,106 @@
               <div
                 class="stack-icon icon-1"
                 data-aos="flip-left"
-                data-aos-delay="400"
+                data-aos-delay="250"
               >
-                <img src="images/chatgpt.webp" alt="chatgpt" />
+                <img
+                  src="images/chatgpt.webp"
+                  alt="ChatGPT"
+                  width="50"
+                  height="50"
+                  loading="lazy"
+                />
               </div>
               <div
                 class="stack-icon icon-2"
                 data-aos="flip-left"
-                data-aos-delay="450"
+                data-aos-delay="300"
               >
-                <img src="images/midjourney.webp" alt="midjourney" />
+                <img
+                  src="images/midjourney.webp"
+                  alt="Midjourney"
+                  width="50"
+                  height="50"
+                  loading="lazy"
+                />
               </div>
               <div
                 class="stack-icon icon-3"
                 data-aos="flip-left"
-                data-aos-delay="500"
+                data-aos-delay="350"
               >
-                <img src="images/relume.webp" alt="relume" />
+                <img
+                  src="images/relume.webp"
+                  alt="Relume"
+                  width="50"
+                  height="50"
+                  loading="lazy"
+                />
               </div>
               <div
                 class="stack-icon icon-4"
                 data-aos="flip-left"
-                data-aos-delay="550"
+                data-aos-delay="400"
               >
-                <img src="images/html.webp" alt="html" />
+                <img
+                  src="images/html.webp"
+                  alt="HTML"
+                  width="50"
+                  height="50"
+                  loading="lazy"
+                />
               </div>
               <div
                 class="stack-icon icon-5"
                 data-aos="flip-left"
-                data-aos-delay="600"
+                data-aos-delay="450"
               >
-                <img src="images/css.webp" alt="css" />
+                <img
+                  src="images/css.webp"
+                  alt="CSS"
+                  width="50"
+                  height="50"
+                  loading="lazy"
+                />
               </div>
               <div
                 class="stack-icon icon-6"
                 data-aos="flip-left"
-                data-aos-delay="650"
+                data-aos-delay="500"
               >
-                <img src="images/javascript.webp" alt="javascript" />
+                <img
+                  src="images/javascript.webp"
+                  alt="JavaScript"
+                  width="50"
+                  height="50"
+                  loading="lazy"
+                />
               </div>
               <div
                 class="stack-icon icon-7"
                 data-aos="flip-left"
-                data-aos-delay="700"
+                data-aos-delay="550"
               >
-                <img src="images/react.webp" alt="react" />
+                <img
+                  src="images/react.webp"
+                  alt="React"
+                  width="50"
+                  height="50"
+                  loading="lazy"
+                />
               </div>
               <div
                 class="stack-icon icon-8"
                 data-aos="flip-left"
-                data-aos-delay="750"
+                data-aos-delay="600"
               >
-                <img src="images/supabase.webp" alt="supabase" />
+                <img
+                  src="images/supabase.webp"
+                  alt="Supabase"
+                  width="50"
+                  height="50"
+                  loading="lazy"
+                />
               </div>
             </div>
           </div>
@@ -182,7 +251,7 @@
         <div
           class="inner-left-col-box box-4-about"
           data-aos="zoom-in"
-          data-aos-delay="350"
+          data-aos-delay="200"
         >
           <div class="box-5-text-holder box-4-about-text-holder">
             <h3 class="box-5-text box-4-text">
@@ -204,27 +273,31 @@
       </section>
     </main>
 
-    <!-- AOS Script -->
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <script>
-      AOS.init({
-        duration: 1000,
-        easing: "ease-out-back",
-        once: true,
-        offset: 50,
-        delay: 50,
+    <!-- Scripts (defer for non-blocking load) -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js" defer></script>
+    <script defer>
+      window.addEventListener("load", function () {
+        AOS.init({
+          duration: 500,
+          easing: "ease-out-back",
+          once: true,
+          offset: 30,
+          delay: 0,
+        });
       });
     </script>
 
     <script
       type="module"
       src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+      defer
     ></script>
     <script
       nomodule
       src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
+      defer
     ></script>
 
-    <script src="js/script.js"></script>
+    <script src="js/script.js" defer></script>
   </body>
 </html>

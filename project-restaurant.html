@@ -3,37 +3,61 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="shortcut icon" href="images/logo2.png" type="image/x-icon" />
-    <link rel="stylesheet" href="css/style.css" />
-    <link rel="stylesheet" href="css/queries.css" />
+    <meta
+      name="description"
+      content="Case study: Alpine House Restaurant - Full-stack website with React, Supabase, and custom admin dashboard for dynamic menu management."
+    />
+    <title>Alpine House Restaurant | Djordje Jovic</title>
+
+    <!-- Preconnect -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preconnect" href="https://unpkg.com" />
+
+    <!-- Favicon -->
+    <link rel="icon" href="images/logo2.webp" type="image/webp" />
+
+    <!-- Preload Critical Resources -->
+    <link rel="preload" href="css/style.css" as="style" />
     <link
-      href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap"
+      rel="preload"
+      href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;600;700&display=swap"
+      as="style"
+    />
+
+    <!-- Critical CSS -->
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/queries.css" />
+
+    <!-- Fonts (optimized) -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;600;700&display=swap"
       rel="stylesheet"
     />
 
-    <!-- AOS CSS -->
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
-
-    <title>Alpine House Restaurant | Djordje Jovic</title>
+    <!-- AOS CSS (non-blocking) -->
+    <link
+      href="https://unpkg.com/aos@2.3.1/dist/aos.css"
+      rel="stylesheet"
+      media="print"
+      onload="this.media = 'all'"
+    />
+    <noscript>
+      <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    </noscript>
   </head>
   <body>
     <main>
       <section class="bento-grid about-grid">
         <!-- Close Button -->
-        <div
-          class="about-page-btn-holder"
-          data-aos="zoom-in"
-          data-aos-delay="100"
-        >
+        <div class="about-page-btn-holder" data-aos="zoom-in">
           <div class="about-icon-holder">
             <ion-icon name="close-outline" class="about-page-icon"></ion-icon>
           </div>
         </div>
 
         <!-- Project Header -->
-        <div class="project-header" data-aos="zoom-in" data-aos-delay="150">
+        <div class="project-header" data-aos="zoom-in">
           <div class="project-title-holder">
             <h1 class="project-heading">Alpine House Restaurant</h1>
             <p class="project-subheading">Website</p>
@@ -44,7 +68,7 @@
             <div
               class="inner-left-col-box box-1-project"
               data-aos="zoom-in"
-              data-aos-delay="200"
+              data-aos-delay="50"
             >
               <div class="box-1-project-text-holder">
                 <div class="box-1-project-info">
@@ -71,7 +95,7 @@
             <div
               class="inner-left-col-box box-2-project"
               data-aos="zoom-in"
-              data-aos-delay="250"
+              data-aos-delay="100"
             >
               <div class="box-2-project-text-holder">
                 <div class="box-2-project-overview">
@@ -96,6 +120,7 @@
                 <a
                   href="https://www.alpinehousebasalt.com/"
                   target="_blank"
+                  rel="noopener"
                   class="project-box-btn-link"
                 >
                   <button class="project-box-btn">
@@ -112,7 +137,7 @@
         </div>
 
         <!-- Challenge Section -->
-        <div class="project-section" data-aos="fade-up" data-aos-delay="100">
+        <div class="project-section" data-aos="fade-up" data-aos-delay="50">
           <h2>Challenge</h2>
           <p>
             Alpine House wanted to showcase their authentic Austrian-German
@@ -144,11 +169,11 @@
         <div
           class="inner-left-col-box box-3-project box-3-project-restaurant"
           data-aos="zoom-in"
-          data-aos-delay="150"
+          data-aos-delay="50"
         ></div>
 
         <!-- Process Section -->
-        <div class="process-section" data-aos="fade-up" data-aos-delay="100">
+        <div class="process-section" data-aos="fade-up" data-aos-delay="50">
           <h2>Process</h2>
 
           <div class="process-step">
@@ -204,14 +229,14 @@
         <div
           class="inner-left-col-box box-3-project box-5-project"
           data-aos="zoom-in"
-          data-aos-delay="150"
+          data-aos-delay="50"
         ></div>
 
         <!-- Solution Section -->
         <div
           class="solution-section solution-section-rest"
           data-aos="fade-up"
-          data-aos-delay="100"
+          data-aos-delay="50"
         >
           <h2>Solution</h2>
           <div class="solution-grid">
@@ -266,31 +291,35 @@
         <div
           class="inner-left-col-box solution-image solution-image-restaurant"
           data-aos="zoom-in"
-          data-aos-delay="150"
+          data-aos-delay="50"
         ></div>
       </section>
     </main>
 
-    <!-- AOS Script -->
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <script>
-      AOS.init({
-        duration: 1000,
-        easing: "ease-out-back",
-        once: true,
-        offset: 50,
-        delay: 50,
+    <!-- Scripts (defer for non-blocking load) -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js" defer></script>
+    <script defer>
+      window.addEventListener("load", function () {
+        AOS.init({
+          duration: 500,
+          easing: "ease-out-back",
+          once: true,
+          offset: 30,
+          delay: 0,
+        });
       });
     </script>
 
     <script
       type="module"
       src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+      defer
     ></script>
     <script
       nomodule
       src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
+      defer
     ></script>
-    <script src="js/script.js"></script>
+    <script src="js/script.js" defer></script>
   </body>
 </html>
