@@ -5,16 +5,40 @@
     width: 98%;
   }
 
-  /* Order: box-1, box-4, box-2, box-6, box-9, box-7, box-5, box-8 */
+  /* Combined: Full width columns */
+  .box-1,
+  .box-1-project,
+  .box-9,
+  .box-1-about,
+  .box-2-about,
+  .box-2-project,
+  .project-header,
+  .project-section,
+  .box-3-project,
+  .process-section,
+  .solution-section,
+  .solution-image {
+    grid-column: 1 / 13;
+  }
+
+  /* Combined: Min heights */
+  .box-1,
+  .box-4-link,
+  .box-9 {
+    min-height: 250px;
+  }
+
+  .box-2,
+  .box-6 {
+    min-height: 350px;
+  }
+
   .box-1 {
     grid-row: 1;
-    min-height: 250px;
-    grid-column: 1 / 13;
   }
 
   .box-4-link {
     grid-row: 2;
-    min-height: 250px;
     grid-column: 5 / 13;
   }
 
@@ -25,20 +49,16 @@
 
   .box-2 {
     grid-row: 3;
-    min-height: 350px;
     grid-column: 1 / 7;
   }
 
   .box-6 {
     grid-row: 3;
-    min-height: 350px;
     grid-column: 7 / 13;
   }
 
   .box-9 {
     grid-row: 5;
-    min-height: 250px;
-    grid-column: 1 /13;
   }
 
   .box-9-holder {
@@ -50,7 +70,7 @@
   .box-7 {
     grid-row: 6;
     min-height: 90px;
-    grid-column: 6 /9;
+    grid-column: 6 / 9;
   }
 
   .box-5 {
@@ -59,7 +79,9 @@
     grid-column: 1 / 6;
   }
 
-  .box-5-text-holder {
+  /* Combined: Gap adjustments */
+  .box-5-text-holder,
+  .box-1-text-holder {
     gap: 24px;
   }
 
@@ -67,10 +89,6 @@
     grid-row: 6;
     min-height: 140px;
     grid-column: 9 / 13;
-  }
-
-  .box-1-text-holder {
-    gap: 24px;
   }
 
   .box-1-title {
@@ -92,13 +110,11 @@
   }
 
   .box-1-about {
-    grid-column: 1 /13;
     grid-row: 2;
   }
 
   .box-2-about {
     grid-row: 3;
-    grid-column: 1 / 13;
   }
 
   .box-2-about-text {
@@ -118,37 +134,8 @@
     grid-column: 8 / 13;
   }
 
-  .project-header {
-    grid-column: 1 / 13;
-  }
-
   .box-1-project {
     grid-row: 2;
-    grid-column: 1 / 13;
-  }
-
-  .box-2-project {
-    grid-column: 1 / 13;
-  }
-
-  .project-section {
-    grid-column: 1 / 13;
-  }
-
-  .box-3-project {
-    grid-column: 1 / 13;
-  }
-
-  .process-section {
-    grid-column: 1 /13;
-  }
-
-  .solution-section {
-    grid-column: 1 /13;
-  }
-
-  .solution-image {
-    grid-column: 1 /13;
   }
 }
 
@@ -165,80 +152,52 @@
     font-size: 24px;
   }
 
-  .box-1-about-text {
+  /* Combined: 18px text */
+  .box-1-about-text,
+  .slide-text,
+  .project-section p,
+  .challenge-list,
+  .box-2-project-overview p,
+  .box-1-project-info p,
+  .process-section p,
+  .solution-item p {
     font-size: 18px;
   }
 
-  .slide-title {
-    font-size: 20px;
-  }
-
-  .slide-text {
-    font-size: 18px;
-  }
-
-  .project-section h2 {
+  /* Combined: 24px headings */
+  .project-section h2,
+  .process-section h2,
+  .solution-section h2 {
     font-size: 24px;
   }
 
-  .project-section p {
-    font-size: 18px;
-  }
-
-  .challenge-list {
-    font-size: 18px;
-  }
-
-  .box-2-project-overview p {
-    font-size: 18px;
+  /* Combined: 20px subheadings */
+  .slide-title,
+  .process-step h4,
+  .solution-item h4 {
+    font-size: 20px;
   }
 
   .project-box-btn {
     font-size: 16px;
     max-width: 180px;
   }
-
-  .box-1-project-info p {
-    font-size: 18px;
-  }
-
-  .process-section h2 {
-    font-size: 24px;
-  }
-
-  .process-section p {
-    font-size: 18px;
-  }
-
-  .process-step h4 {
-    font-size: 20px;
-  }
-
-  .solution-section h2 {
-    font-size: 24px;
-  }
-
-  .solution-item p {
-    font-size: 18px;
-  }
-
-  .solution-item h4 {
-    font-size: 20px;
-  }
 }
 
 @media screen and (max-width: 800px) {
+  /* Combined: Full width */
+  .box-2,
+  .box-4-link,
+  .box-6 {
+    grid-column: 1 / 13;
+  }
+
   .box-2 {
     grid-row: 3;
-    grid-column: 1 / 13;
   }
 
   .box-3 {
     display: none;
-  }
-
-  .box-4-link {
-    grid-column: 1 / 13;
   }
 
   .box-5 {
@@ -247,7 +206,6 @@
 
   .box-6 {
     grid-row: 4;
-    grid-column: 1 / 13;
   }
 
   .box-7 {
@@ -270,6 +228,7 @@
 
   .project-title-holder {
     align-items: center;
+    text-align: center;
   }
 }
 
@@ -278,13 +237,16 @@
     grid-template-columns: repeat(6, 1fr);
   }
 
-  .box-5 {
+  /* Combined: Full width rows */
+  .box-5,
+  .box-7,
+  .box-3-about,
+  .box-4-about {
     grid-column: 1 / 13;
   }
 
   .box-7 {
     grid-row: 7;
-    grid-column: 1 / 13;
   }
 
   .box-8 {
@@ -303,13 +265,13 @@
     font-size: 32px;
   }
 
-  .box-1-text {
-    font-size: 20px;
-  }
-
+  /* Combined: 20px text */
+  .box-1-text,
   .box-4-text {
     font-size: 20px;
   }
+
+  /* Combined: Padding and height reset */
   .box-1,
   .box-2,
   .box-4,
@@ -322,12 +284,10 @@
 
   .box-3-about {
     grid-row: 4;
-    grid-column: 1 / 13;
   }
 
   .box-4-about {
     grid-row: 5;
-    grid-column: 1 / 13;
   }
 
   .about-page-stack-icon {
@@ -336,10 +296,8 @@
 }
 
 @media screen and (max-width: 500px) {
-  .stack-icons {
-    grid-template-columns: repeat(4, 1fr);
-  }
-
+  /* Combined: 4 column grids */
+  .stack-icons,
   .about-page-stack-icon {
     grid-template-columns: repeat(4, 1fr);
   }

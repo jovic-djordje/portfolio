@@ -177,7 +177,8 @@ main {
 }
 
 /* BOX 2 & 6 - Projects (combined shared styles) */
-.box-2-link {
+.box-2-link,
+.box-6-link {
   position: absolute;
   top: 0;
   left: 0;
@@ -214,6 +215,10 @@ main {
   background-image: url(../images/project.webp);
 }
 
+.box-6-image {
+  background-image: url(../images/project-three.webp);
+}
+
 .box-2:hover .box-2-image,
 .box-6:hover .box-6-image {
   transform: scale(1.1);
@@ -238,7 +243,6 @@ main {
 .box-6:hover .box-2-overlay {
   transform: translateY(0);
 }
-
 .prjocet-title {
   font-weight: 700;
   text-shadow: 0 2px 10px rgba(0, 0, 0, 0.8);
@@ -623,9 +627,8 @@ input:checked + .btn::before {
   width: 100%;
   display: flex;
   justify-content: center;
-  grid-column: 1 /13;
-  padding-top: 30px;
-  padding-bottom: 60px;
+  grid-column: 1 / 13;
+  padding: 30px 0 60px;
 }
 
 .about-icon-holder {
@@ -663,9 +666,16 @@ input:checked + .btn::before {
   font-size: 24px;
 }
 
+/* Combined: About boxes padding */
+.box-1-about,
+.box-2-about,
+.box-3-about,
+.box-4-about {
+  padding: 30px;
+}
+
 .box-1-about {
   grid-column: 2 / 9;
-  padding: 30px;
 }
 
 .box-1-about-text-holder {
@@ -683,15 +693,11 @@ input:checked + .btn::before {
   font-weight: 500;
 }
 
-.story-section {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: flex-start;
-  gap: 12px;
-}
-
-.story-section h3 {
+/* Combined: Section labels (story, carousel, project info) */
+.story-section h3,
+.section-label,
+.box-1-project-info h3,
+.box-2-project-overview h3 {
   color: #666666;
   text-transform: uppercase;
   font-size: 16px;
@@ -699,26 +705,33 @@ input:checked + .btn::before {
   letter-spacing: 1px;
 }
 
-.box-1-about-text {
-  line-height: 1.7;
-  font-size: 20px;
+.story-section,
+.current-section {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 12px;
 }
 
 .current-section {
   margin-top: 16px;
 }
 
-.box-2-about {
-  grid-column: 2/8;
-  padding: 30px;
+/* Combined: Body text styles */
+.box-1-about-text,
+.slide-text,
+.box-1-project-info p,
+.box-2-project-overview p,
+.project-section p,
+.challenge-list,
+.process-step p,
+.solution-item p {
+  font-size: 20px;
+  line-height: 1.7;
 }
 
-.section-label {
-  color: #666666;
-  text-transform: uppercase;
-  font-size: 16px;
-  font-weight: 600;
-  letter-spacing: 1px;
+.box-2-about {
+  grid-column: 2 / 8;
 }
 
 .carousel-container {
@@ -733,14 +746,12 @@ input:checked + .btn::before {
   scroll-behavior: smooth;
   gap: 16px;
   padding-bottom: 10px;
-
-  /* Hide scrollbar but keep functionality */
-  scrollbar-width: none; /* Firefox */
-  -ms-overflow-style: none; /* IE/Edge */
+  scrollbar-width: none;
+  -ms-overflow-style: none;
 }
 
 .carousel-track::-webkit-scrollbar {
-  display: none; /* Chrome/Safari */
+  display: none;
 }
 
 .carousel-slide {
@@ -758,11 +769,6 @@ input:checked + .btn::before {
   font-weight: 500;
 }
 
-.slide-text {
-  font-size: 20px;
-  line-height: 1.7;
-}
-
 /* Dot indicators */
 .carousel-dots {
   display: flex;
@@ -776,14 +782,12 @@ input:checked + .btn::before {
   height: 8px;
   border-radius: 50%;
   background: #333333;
-  cursor: pointer;
-  transition: all 0.3s ease;
   cursor: url("../images/cursor.png"), auto;
+  transition: all 0.3s ease;
 }
 
 .dot:hover {
   background: #555555;
-  cursor: url("../images/cursor.png"), auto;
 }
 
 .dot.active {
@@ -795,7 +799,6 @@ input:checked + .btn::before {
 .box-3-about {
   grid-row: 2;
   grid-column: 9 / 12;
-  padding: 30px;
 }
 
 .box-3-holder {
@@ -813,7 +816,6 @@ input:checked + .btn::before {
 }
 
 .box-4-about {
-  padding: 30px;
   grid-column: 8 / 12;
 }
 
@@ -821,8 +823,7 @@ input:checked + .btn::before {
   gap: 24px;
 }
 
-/*PROJECT PAGE */
-
+/* PROJECT PAGE */
 .project-header {
   display: grid;
   align-items: flex-start;
@@ -833,7 +834,6 @@ input:checked + .btn::before {
 .project-title-holder {
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: flex-start;
   gap: 4px;
 }
@@ -857,73 +857,45 @@ input:checked + .btn::before {
 }
 
 .box-1-project {
-  padding: 30px;
   grid-column: 1 / 5;
+  padding: 30px;
 }
 
-.box-1-project-text-holder {
+/* Combined: Project box text holders */
+.box-1-project-text-holder,
+.box-2-project-text-holder,
+.box-1-project-info,
+.box-2-project-overview,
+.story-section,
+.process-step,
+.solution-item {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: flex-start;
+}
+
+.box-1-project-text-holder {
   gap: 24px;
 }
 
 .box-1-project-info {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: flex-start;
   gap: 4px;
 }
 
-.box-1-project-info h3 {
-  color: #666666;
-  text-transform: uppercase;
-  font-size: 16px;
-  font-weight: 600;
-  letter-spacing: 1px;
-}
-
-.box-1-project-info p {
-  line-height: 1.7;
-  font-size: 20px;
-}
-
 .box-2-project {
-  padding: 30px;
   grid-row: 1;
   grid-column: 5 / 13;
   height: 100%;
+  padding: 30px;
 }
 
 .box-2-project-text-holder {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: flex-start;
   gap: 28px;
 }
 
 .box-2-project-overview {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: flex-start;
   gap: 16px;
-}
-
-.box-2-project-overview h3 {
-  color: #666666;
-  text-transform: uppercase;
-  font-size: 16px;
-  font-weight: 600;
-  letter-spacing: 1px;
-}
-
-.box-2-project-overview p {
-  font-size: 20px;
-  line-height: 1.7;
 }
 
 .project-box-btn-link {
@@ -941,34 +913,46 @@ input:checked + .btn::before {
   border: 3px solid #242424;
   max-width: 200px;
   width: 100%;
-  padding: 10px 0px;
+  padding: 10px 0;
   display: flex;
   justify-content: center;
   align-items: center;
   gap: 12px;
   cursor: url("../images/cursor.png"), auto;
   border-radius: 16px;
+  transition: background 0.3s ease;
 }
 
 .project-box-btn:hover {
   background: #242424;
-  cursor: url("../images/cursor.png"), auto;
 }
 
-.box-3-project {
-  grid-row: 4;
+/* Combined: Full-width project images */
+.box-3-project,
+.box-5-project,
+.solution-image {
   grid-column: 2 / 12;
-  background-image: url(../images/RatakFit.webp);
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
   aspect-ratio: 16 / 9;
-  margin: 20px 0px;
+  margin: 20px 0;
   border-radius: 12px;
 }
 
-.project-section {
-  grid-row: 3;
+.box-3-project {
+  grid-row: 4;
+  background-image: url(../images/RatakFit.webp);
+}
+
+.box-3-project-restaurant {
+  background-image: url(../images/AlpineHouse.webp);
+}
+
+/* Combined: Project sections */
+.project-section,
+.process-section,
+.solution-section {
   grid-column: 2 / 12;
   display: flex;
   flex-direction: column;
@@ -977,106 +961,74 @@ input:checked + .btn::before {
   gap: 16px;
 }
 
-.project-section h2 {
+.project-section {
+  grid-row: 3;
+}
+
+/* Combined: Section headings */
+.project-section h2,
+.process-section h2,
+.solution-section h2 {
   font-size: 28px;
+}
+
+.project-section h2,
+.solution-section h2 {
   margin-top: 20px;
 }
 
-.project-section p {
-  font-size: 20px;
-  line-height: 1.5;
+.solution-section-rest h2 {
+  margin: 0;
 }
 
 .challenge-list {
   margin-left: 20px;
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: flex-start;
   gap: 12px;
-  font-size: 20px;
 }
 
 .process-section {
   grid-row: 5;
-  grid-column: 2 / 12;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: flex-start;
-  gap: 16px;
-}
-
-.process-section h2 {
-  font-size: 28px;
 }
 
 .process-step {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: flex-start;
   gap: 12px;
 }
 
-.process-step h4 {
+.process-step h4,
+.solution-item h4 {
   font-size: 22px;
+}
+
+.process-step h4 {
   font-weight: 500;
 }
 
-.process-step p {
-  font-size: 20px;
-  line-height: 1.5;
+.box-5-project {
+  grid-row: 6;
+  background-image: url(../images/Home.webp);
 }
 
 .solution-section {
-  grid-row: 6;
-  grid-column: 2 / 12;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: flex-start;
-  gap: 16px;
-}
-
-.solution-section h2 {
-  font-size: 28px;
-  margin-top: 20px;
+  grid-row: 7;
 }
 
 .solution-grid {
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: flex-start;
   gap: 16px;
 }
 
 .solution-item {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: flex-start;
   gap: 4px;
 }
 
-.solution-item h4 {
-  font-size: 22px;
-}
-
-.solution-item p {
-  font-size: 20px;
-  line-height: 1.5;
-}
-
 .solution-image {
-  grid-row: 7;
-  grid-column: 2 / 12;
+  grid-row: 8;
   background-image: url(../images/RatakFit2.webp);
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  aspect-ratio: 16 / 9;
-  margin: 20px 0px;
-  border-radius: 12px;
+}
+
+.solution-image-restaurant {
+  background-image: url(../images/AlpineHouse2.webp);
 }
