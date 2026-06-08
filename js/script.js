@@ -3,6 +3,7 @@
 const currentYear = new Date().getFullYear();
 yearEl.textContent = currentYear;*/
 
+// COPY EMAIL FUNCTION
 let isCopying = false;
 
 const copyEmail = () => {
